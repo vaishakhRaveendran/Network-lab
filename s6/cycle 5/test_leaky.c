@@ -50,6 +50,7 @@ int main()
 			{
 				printf(" \nTime left for transmission : %d units ", timeToTransmit - clk);
 				printf(" \nNo packets to transmit !!\n ");
+                
 			}
         }
         
