@@ -30,8 +30,6 @@ void main()
     char *ip = "127.0.0.100";
     int port = 5568;
 
-    pthread_t timeoutThread;
-
     int sockfd;
     struct sockaddr_in addr;
     char buffer[1024];
