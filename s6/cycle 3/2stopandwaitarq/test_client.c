@@ -29,7 +29,20 @@ void main(){
         bzero(buffer,1024);
         addr_size=sizeof(addr);
         struct timeval timeout;
-        timeout.
+        timeout.tv_sec=timeoutval;
+        timeout.tv_usec=0;
+        if(socksetopt(sockfd,SOL_SOCKET,SO_RCVTIMEO,&timeout,sizeof(timeout))<0){
+            perror();
+            exit(1)
+
+        }
+        else{
+             bzero(buffer,1024);
+             addr_size=sizeof(addr);
+             recvfrom(sockfd,buffer,1024,0,(struct sockaddr*)&addr,&addr_size);
+             packet_counter++;
+
+        }
 
     }
 
