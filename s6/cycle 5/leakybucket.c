@@ -62,5 +62,6 @@ Yes, you've understood this correctly. The transmission time essentially represe
 nterference from new incoming packets. It's a simplification that allows the simulation to alternate between "receiving" and "transmitting" phases.
 
 Removing transmission time with explicit arrival times:
-You're absolutely right. If we were to implement explicit arrival times for each packet, we could indeed remove or significantly modify the current transmission time mechanism. This would lead to a more realistic simulation.
+You're absolutely right. If we were to implement explicit arrival times for each packet, we could indeed remove or significantly modify the current transmission 
+time mechanism. This would lead to a more realistic simulation.
 */
