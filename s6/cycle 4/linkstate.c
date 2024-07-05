@@ -28,7 +28,10 @@ void main()
     {
         int indexNode;
         int min = INT_MAX;
-
+       
+        //Finding the nearest unvisited node that hasn't been added by iterating through the matrix.
+        //Stored in the variable indexNode.
+        //Unvisited node means a node which has not been used as intermediate...
         for (int i = 0; i < nodeCount; ++i)
         {
             if (nodes[root][i] != -1 && root != i && nodesAdded[i] != 1 && nodes[root][i] < min)

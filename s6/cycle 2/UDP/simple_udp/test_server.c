@@ -40,6 +40,7 @@ void main(){
     strcpy(buffer, "Data successfully received.");
     printf("(Server) Data to client: %s\n", buffer);
 
+    //HERE WE HAVENT USED LISTEN OR ACCEPT INSTEAD ITS PARAMETER IS ALSO PASSED INTO SENTO AND RECVFROM.....
     sendto(client_sock, buffer, 1024, 0, (struct sockaddr *)&client_addr, sizeof(client_addr));
 
 }
