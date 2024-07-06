@@ -89,17 +89,17 @@ void main()
                 else {
                   windowStart++;
                   if (windowEnd < packetCount)
-                      windowEnd++;
+                      windowEnd++;//more packets to send...
 
                   if (windowStart != windowEnd)
                   {
                       bzero(buffer, 1024);
-                      if(flag==1) {
+                      if(flag==1) {//sending last packet....
                         sprintf(buffer, "%d", packets[windowEnd-1]);
                         printf("Client: Sending packet %s\n", buffer);
                         sendto(sockfd, buffer, 1024, 0, (struct sockaddr *)&addr, sizeof(addr));
                       }
-                      if(windowEnd=packetCount)
+                      if(windowEnd==packetCount)
                         flag=0;
                   }
               }

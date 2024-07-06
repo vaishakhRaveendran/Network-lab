@@ -74,7 +74,19 @@ void main()
                 else{
                     windowStart++;
                     //wndowstart can be increased without much worries.
-                    if(windowStart<)
+                    if(windowEnd<packetCount)
+                    windowEnd++;
+                    if(windowEnd!=windowStart){
+                        if(flag==0)
+                        {
+                        printf(buffer, "%d", packets[windowEnd-1]);
+                        printf("Client: Sending packet %s\n", buffer);
+                        sendto(sockfd, buffer, 1024, 0, (struct sockaddr *)&addr, sizeof(addr));
+                        }
+                        if(windowEnd==packetCount)
+                        flag=1;
+
+                    }
                 }
             }
 
